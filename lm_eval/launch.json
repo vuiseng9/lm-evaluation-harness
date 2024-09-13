@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "[LEH]",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/lm-evaluation-harness/lm_eval",
+            "program": "__main__.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--model", "hf",
+                "--model_args", "pretrained=mistralai/Mistral-7B-Instruct-v0.2,dtype=float16",
+                "--tasks", "mmlu",
+                "--num_fewshot", "5",
+                "--device", "cuda:0",
+                "--batch_size", "auto",
+                "--output_path", "/tmp/lm_eval_out"
+            ]
+        }
+    ]
+}
+
+// lm_eval --model hf \
+//     --model_args pretrained=meta-llama/Meta-Llama-3.1-8B \
+//     --tasks hellaswag \
+//     --device cuda:0 \
+//     --batch_size 8
+ 
+// lm-eval --tasks list
