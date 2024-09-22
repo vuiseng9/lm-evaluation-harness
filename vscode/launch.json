@@ -14,9 +14,11 @@
             "justMyCode": false,
             "args": [
                 "--model", "hf",
-                "--model_args", "pretrained=mistralai/Mistral-7B-Instruct-v0.2,dtype=float16",
-                "--tasks", "mmlu",
-                "--num_fewshot", "5",
+                "--model_args", "pretrained=vuiseng9/Meta-Llama-3.1-8B-wanda-2of4,dtype=float16",
+                "--tasks", "wikitext",
+                // "--model_args", "pretrained=mistralai/Mistral-7B-Instruct-v0.2,dtype=float16",
+                // "--tasks", "mmlu",
+                // "--num_fewshot", "5",
                 "--device", "cuda:0",
                 "--batch_size", "auto",
                 "--output_path", "/tmp/lm_eval_out"
